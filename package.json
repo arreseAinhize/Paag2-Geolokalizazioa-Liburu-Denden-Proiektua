@@ -1,0 +1,25 @@
+{
+  "name": "paag2-geolokalizazioa-liburu-denden-proiektua",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arreseAinhize/Paag2-Geolokalizazioa-Liburu-Denden-Proiektua.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/arreseAinhize/Paag2-Geolokalizazioa-Liburu-Denden-Proiektua/issues"
+  },
+  "homepage": "https://github.com/arreseAinhize/Paag2-Geolokalizazioa-Liburu-Denden-Proiektua#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql2": "^3.15.3"
+  }
+}
