@@ -1,0 +1,210 @@
+:root {
+  --color-primary: #00c6e6;
+  --color-secondary: #253045;
+  --color-accent: #bfc0d1;
+
+  --color-success: #00e6b3;
+  --color-warning: #f2c94c;
+  --color-error: #ff4f5e;
+
+  --body-bg: #191e2b;
+  --body-color: #bfc0d1;
+
+  --heading-color: #00c6e6;
+  --subheading-color: #bfc0d1;
+
+  --border-color: #253045;
+  --border-light: #bfc0d1;
+  --border-highlight: #00c6e6;
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+}
+
+.navbar {
+    background-color: var(--color-secondary) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: var(--color-accent) !important;
+}
+
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--border-highlight);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2800, 198, 230, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #00b3d1;
+    border-color: #00b3d1;
+}
+
+.btn-outline-primary {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.card {
+    background-color: var(--color-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--body-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--border-highlight);
+}
+
+.card-title {
+    color: var(--heading-color);
+}
+
+.card .btn {
+    margin-top: auto;
+}
+
+footer {
+    background-color: var(--color-secondary);
+    border-top: 1px solid var(--border-color);
+    color: var(--color-accent);
+}
+
+footer h5 {
+    color: var(--heading-color);
+}
+
+footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--color-primary);
+}
+
+.social-links a {
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+.breadcrumb {
+    background-color: var(--color-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.breadcrumb-item a {
+    color: var(--color-accent);
+}
+
+.breadcrumb-item.active {
+    color: var(--color-primary);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--color-accent);
+}
+
+.main-content {
+    min-height: calc(100vh - 120px);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--body-bg) 100%);
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.testimonial-card {
+    border-left: 3px solid var(--color-primary);
+}
+
+.testimonial-author {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.form-control {
+    background-color: var(--color-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--body-color);
+}
+
+.form-control:focus {
+    background-color: var(--color-secondary);
+    border-color: var(--color-primary);
+    color: var(--body-color);
+    box-shadow: 0 0 0 0.25rem rgba(0, 198, 230, 0.25);
+}
+
+.alert-success {
+    background-color: rgba(0, 230, 179, 0.1);
+    border-color: var(--color-success);
+    color: var(--color-success);
+}
+
+.alert-warning {
+    background-color: rgba(242, 201, 76, 0.1);
+    border-color: var(--color-warning);
+    color: var(--color-warning);
+}
+
+.alert-error {
+    background-color: rgba(255, 79, 94, 0.1);
+    border-color: var(--color-error);
+    color: var(--color-error);
+}
+
+.bg-primary-custom {
+    background-color: var(--color-primary) !important;
+}
+
+.text-primary-custom {
+    color: var(--color-primary) !important;
+}
+
+.border-custom {
+    border-color: var(--border-color) !important;
+}
+
+.theme-toggle {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-secondary);
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiburuGune</title>
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    </link>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- CSS for dark theme -->
+    <link rel="stylesheet" href="css/darkStyle.css" id="theme-style">
+
+    <!-- CSS for aditional styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Button to change theme -->
+    <button type="button" class="btn btn-primary theme-toggle" id="theme-toggle" aria-pressed="false"
+        title="Gaia aldatu (claro/oscuro)">
+        <i class="bi bi-moon-fill" aria-hidden="true"></i>
+    </button>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-book-fill me-2"></i>LiburuGune
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="bi bi-house me-1"></i> Hasiera
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-info-circle me-1"></i> Nor gara
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-shop me-1"></i> Durangaldeko dendak
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-map me-1"></i> Denden kokapena
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- Buscador y botones a la derecha -->
+                <form class="d-flex me-2">
+                    <input class="form-control me-2" type="search" placeholder="Bilatu..." id="SearchPlaceholder">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-translate me-1"></i> Hizkuntzak
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Ingelesa</a></li>
+                            <li><a class="dropdown-item" href="#">Gaztelera</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item disabled" href="#">Euskera</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Zure liburu-denda hurbilenak</h1>
+                    <p class="lead mb-4">Durangaldeko liburu denda txikiak aurkitzeko toki aproposa. Bertan liburu
+                        denden kokalekua eta berain inguruko informazioa bilatzeko aukera duzu!</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-primary btn-lg">Liburu dendak</a>
+                        <a href="#" class="btn btn-outline-primary btn-lg">Liburu denden kokapena</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="bi bi-book feature-icon"></i>
+                    <i class="bi bi-shop feature-icon mx-4"></i>
+                    <i class="bi bi-map feature-icon"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <div class="container my-5">
+            <!-- "Service" section -->
+            <div id="services-row" class="row mb-5">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold">Gure zerbitzuak</h2>
+                    <p class="lead">Durangaleko liburu denda lokalen inguruko informazioa eskaintzen dugu, herriko
+                        komertxio txikiei bultzada txiki bat emateko asmoz.</p>
+                </div>
+                <!-- DENDEN INGURUKO INFORMZIOA -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 p-3">
+                        <div class="card-body d-flex flex-column">
+                            <div class="feature-icon">
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                            <h5 class="card-title">Denden inguruko informazioa</h5>
+                            <p class="card-text">Zer zaltzen duten, non ahurkitzen diren, dendaren iridia...</p>
+                            <a href="#" class="btn btn-primary mt-auto">Gehiago jakin</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- KOKALEKU ZEHATZA -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 p-3">
+                        <div class="card-body d-flex flex-column">
+                            <div class="feature-icon">
+                                <i class="bi bi-pin-map"></i>
+                            </div>
+                            <h5 class="card-title">Denden kokaleku zehatza</h5>
+                            <p class="card-text">Gure datu basean aurkitzen diren liburu denda gustien kokaleku zehatze
+                                mapa batean ikusteko aukera duzu bertan.</p>
+                            <a href="#" class="btn btn-primary mt-auto">Gehiago jakin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Testimonios -->
+            <div class="row my-5">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold">Gure erabiltzaileek esaten dutena</h2>
+                    <p class="lead">LiburuGune erabiltzen duten irakurle eta liburu-denden esperientziak</p>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card p-4 testimonial-card">
+                        <div class="card-body">
+                            <p class="card-text">"LiburuGuneri esker, auzoko bi liburu-denda berri aurkitu ditut. Orain
+                                askoz ere errazagoa da liburuak eskuz eskuratzea eta tokiko komertzioa sustatzea."</p>
+                            <div class="testimonial-author">Ane Martinez, Irakurle zaletua</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-4 testimonial-card">
+                        <div class="card-body">
+                            <p class="card-text">"Gure liburu-denda txikira bezero berriak erakartzen lagundu digu
+                                LiburuGunek. Tokiko komunitatearekin konektatzeko balio handiko tresna da."</p>
+                            <div class="testimonial-author">Jon Ander, "Kale Nagusia" liburu-dendaren jabea</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">LiburuGune</h5>
+                    <p>Zure liburu-denda lokalak aurkitzeko gida aproposa!</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-2 mb-4">
+                    <h5 class="fw-bold">Estekak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Sarrera</a></li>
+                        <li class="mb-2"><a href="#">Nor gara</a></li>
+                        <li class="mb-2"><a href="#">Durangaldeko dendak</a></li>
+                        <li class="mb-2"><a href="#">Denden kokapena</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold">Servicios</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Desarrollo Web</a></li>
+                        <li class="mb-2"><a href="#">Apps Móviles</a></li>
+                        <li class="mb-2"><a href="#">E-commerce</a></li>
+                        <li class="mb-2"><a href="#">Consultoría IT</a></li>
+                        <li class="mb-2"><a href="#">Marketing Digital</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold">Kontaktua</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Calle Komentu 10, Durango</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +1 234 567 890</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> info@LiburuGune.com</li>
+                        <li class="mb-2"><i class="bi bi-clock me-2"></i> Astelehen - Ostiral: 8:00 - 16:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4 border-custom">
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2026 LiburuGune. Eskubide guztiak erreserbatuta.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="me-3">Pribatutasun-politika</a>
+                    <a href="#">Zerbitzuaren baldintzak</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript para cambiar tema -->
+    <script src="js/theme-toggle.js"></script>
+
+</body>
+
+</html>

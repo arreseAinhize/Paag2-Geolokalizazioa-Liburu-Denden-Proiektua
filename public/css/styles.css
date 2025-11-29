@@ -1,0 +1,70 @@
+/* Estilos adicionales que no dependen del tema */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999999;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Asegurar que el botón sea visible en ambos temas */
+.theme-toggle {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-secondary) !important;
+    pointer-events: auto;
+}
+#SearchPlaceholder::placeholder {
+    color: var(--body-color) !important;
+}
+#SearchPlaceholder {
+    border-color: var(--body-color) !important;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .theme-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* Center service columns and footer content */
+#services-row {
+    justify-content: center; /* center the columns inside the row */
+}
+
+#services-row .col-md-4 {
+    display: flex;
+    justify-content: center; /* center card inside col */
+}
+
+#services-row .card {
+    width: 100%;
+    max-width: 360px; /* a comfortable width so cards look balanced */
+}
+
+footer .row {
+    justify-content: center; /* center columns within footer */
+}
+
+footer .row > [class*='col-'] {
+    text-align: center; /* center content inside columns */
+}
