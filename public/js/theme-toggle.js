@@ -66,9 +66,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Usar el tema guardado si existe
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        themeStyle.setAttribute('href', 'css/lightStyle-new.css');
-        themeToggle.innerHTML = '<i class="bi bi-sun-fill" aria-hidden="true"></i>';
+    if (savedTheme === 'dark') {
+        themeStyle.setAttribute('href', 'css/darkStyle.css');
+        themeToggle.innerHTML = '<i class="bi bi-moon-fill" aria-hidden="true"></i>';
+        themeToggle.setAttribute('aria-pressed', 'false');
         themeToggle.setAttribute('aria-pressed', 'true');
     }
 
