@@ -8,6 +8,7 @@ function isDarkHref(href) {
 
 function toggleTheme() {
     const navbar = document.getElementById('main-navbar');
+    const favicon = document.getElementById('favicon');
     const themeStyle = document.getElementById('theme-style');
     const themeToggle = document.getElementById('theme-toggle');
     
@@ -29,6 +30,11 @@ function toggleTheme() {
             navbar.classList.add('navbar-light');
         }
         
+        // Cambiar favicon a light para tema claro
+        if (favicon) {
+            favicon.setAttribute('href', '../assets/img/Logo-Zuria.png');
+        }
+        
         localStorage.setItem('theme', 'light');
     } else {
         // Cambiar a tema OSCURO
@@ -40,6 +46,11 @@ function toggleTheme() {
         if (navbar) {
             navbar.classList.remove('navbar-light');
             navbar.classList.add('navbar-dark');
+        }
+        
+        // Cambiar favicon a dark para tema oscuro
+        if (favicon) {
+            favicon.setAttribute('href', '../assets/img/Logo-removebg.png');
         }
         
         localStorage.setItem('theme', 'dark');
@@ -80,6 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeStyle = ensureThemeLink();
     const themeToggle = ensureThemeToggle();
     const navbar = document.getElementById('main-navbar'); // DEFINIR navbar aquí
+    const favicon = document.getElementById('favicon'); // DEFINIR favicon aquí
+
 
     // Usar el tema guardado si existe
     const savedTheme = localStorage.getItem('theme');
@@ -93,6 +106,11 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.remove('navbar-dark');
             navbar.classList.add('navbar-light');
         }
+        
+        // Configurar favicon para tema claro
+        if (favicon) {
+            favicon.setAttribute('href', '../assets/img/Logo-Zuria.png');
+        }
     } else {
         // Tema oscuro por defecto
         themeStyle.setAttribute('href', '../assets/styles/css/darkStyle.css');
@@ -103,6 +121,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (navbar) {
             navbar.classList.remove('navbar-light');
             navbar.classList.add('navbar-dark');
+        }
+        
+        // Configurar favicon para tema oscuro
+        if (favicon) {
+            favicon.setAttribute('href', '../assets/img/Logo-removebg.png');
         }
     }
 
