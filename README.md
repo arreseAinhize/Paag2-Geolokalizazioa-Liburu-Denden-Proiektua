@@ -4,15 +4,15 @@
 - [Ainhize Arrese](https://github.com/arreseAinhize)
 
 # AURKIBIDEA
-- [Sarrera]()
-    - [Erabilitako Teknologiak]()
-- [Interfaze Grafikoaren Fluxua]()
-- [Gehigarriak]()
-- [Oharak]()
+- [Sarrera](#sarrera)
+    - [Erabilitako Teknologiak](#erabilitako-teknologiak)
+- [Interfaze Grafikoaren Fluxua](#interfaze-grafikoaren-fluxua)
+- [Gehigarriak](#gehigarriak)
+- [Oharrak](#oharrak)
 
 ## Sarrera
 
-### Rabilitako teknologiak
+### Erabilitako teknologiak
 
 ## Interfaze grafikoaren fluxua
 
