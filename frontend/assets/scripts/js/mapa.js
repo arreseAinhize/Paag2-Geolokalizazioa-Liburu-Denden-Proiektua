@@ -1,9 +1,9 @@
 // Usar URL relativa para la API
-const API_BASE_URL = '/api';
+const API_BASE_URL = 'http://localhost';
 
 let map = null;
 let markers = [];
-let tiendasData = [];
+let allTiendasData = [];
 
 // Inicializa el mapa si existe un contenedor con id "map" y MapLibre está cargado
 function initMap() {
@@ -50,8 +50,8 @@ function initMap() {
 }
 
 // Añade marcadores a partir de tiendasData (GeoJSON features) usando MapLibre
-function mostrarMarcadores() {
-    if (!tiendasData || tiendasData.length === 0) {
+function mostrarMarcadores(features) {
+    if (!features || features.length === 0) {
         console.info('No hay datos de tiendas para mostrar.');
         return;
     }
@@ -66,7 +66,7 @@ function mostrarMarcadores() {
 
         const bounds = new maplibregl.LngLatBounds();
 
-        tiendasData.forEach(feature => {
+        features.forEach(feature => {
             const coords = feature.geometry && feature.geometry.coordinates;
             if (!coords || coords.length < 2) return;
 
@@ -121,7 +121,7 @@ function mostrarMarcadores() {
     const ul = document.createElement('ul');
     ul.className = 'list-unstyled';
 
-    tiendasData.forEach(feature => {
+    features.forEach(feature => {
         const props = feature.properties || {};
         const li = document.createElement('li');
         li.className = 'mb-3 p-2 border rounded';
@@ -159,6 +159,28 @@ function escapeHtml(str) {
         .replace(/'/g, '&#39;');
 }
 
+// Cargar municipios
+async function cargarMunicipiosMapa() {
+    try {
+        const response = await fetch(`${API_BASE_URL}/herriak`);
+        const data = await response.json();
+        
+        if (data.success) {
+            const select = document.getElementById('municipio-filter');
+            if (select) {
+                data.data.forEach(municipio => {
+                    const option = document.createElement('option');
+                    option.value = municipio;
+                    option.textContent = municipio;
+                    select.appendChild(option);
+                });
+            }
+        }
+    } catch (error) {
+        console.error('Error cargando municipios:', error);
+    }
+}
+
 // Cargar datos GeoJSON desde la API
 async function cargarDatosMapa() {
     try {
@@ -166,8 +188,9 @@ async function cargarDatosMapa() {
         const data = await response.json();
 
         if (data && data.success && data.data && data.data.features) {
-            tiendasData = data.data.features;
-            mostrarMarcadores();
+            allTiendasData = data.data.features;
+            mostrarMarcadores(allTiendasData);
+            cargarMunicipiosMapa();
         } else {
             console.warn('Respuesta de /dendak-geojson no contiene features válidas');
         }
@@ -180,6 +203,21 @@ async function cargarDatosMapa() {
 document.addEventListener('DOMContentLoaded', () => {
     initMap();
     cargarDatosMapa();
+    
+    // Event listener for filter
+    const filterSelect = document.getElementById('municipio-filter');
+    if (filterSelect) {
+        filterSelect.addEventListener('change', () => {
+            const selectedMunicipio = filterSelect.value;
+            let filteredFeatures = allTiendasData;
+            if (selectedMunicipio) {
+                filteredFeatures = allTiendasData.filter(feature => 
+                    feature.properties && feature.properties.municipio === selectedMunicipio
+                );
+            }
+            mostrarMarcadores(filteredFeatures);
+        });
+    }
 });
 
 // Exportar funciones para pruebas/uso manual

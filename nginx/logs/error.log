@@ -1,0 +1,34 @@
+2025/12/23 11:17:30 [emerg] 1#1: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/nginx.conf:34
+2025/12/23 11:17:31 [emerg] 1#1: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/nginx.conf:34
+2025/12/23 11:17:32 [emerg] 1#1: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/nginx.conf:34
+2025/12/23 11:17:33 [emerg] 1#1: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/nginx.conf:34
+2025/12/23 11:17:35 [emerg] 1#1: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/nginx.conf:34
+2025/12/23 11:17:36 [emerg] 1#1: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/nginx.conf:34
+2025/12/23 11:17:40 [emerg] 1#1: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/nginx.conf:34
+2025/12/23 11:17:46 [emerg] 1#1: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/nginx.conf:34
+2025/12/23 11:18:00 [emerg] 1#1: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/nginx.conf:34
+2025/12/23 11:30:47 [error] 22#22: *1 open() "/usr/share/nginx/html/frontend/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/dendak-geojson"
+2025/12/23 11:32:29 [error] 30#30: *1 open() "/usr/share/nginx/html/frontend/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/dendak-geojson"
+2025/12/23 11:33:10 [error] 30#30: *6 open() "/usr/share/nginx/html/frontend/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/dendak-geojson"
+2025/12/23 11:51:07 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:70
+2025/12/23 11:51:07 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:70
+2025/12/23 11:51:08 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:70
+2025/12/23 11:51:09 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:70
+2025/12/23 11:51:10 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:70
+2025/12/23 11:51:12 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:70
+2025/12/23 11:51:16 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:70
+2025/12/23 11:51:22 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:70
+2025/12/23 11:51:35 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:70
+2025/12/23 11:58:20 [error] 22#22: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET /dendak-geojson HTTP/1.1", upstream: "http://[::1]:80/dendak-geojson", host: "localhost", referrer: "http://localhost/kokapena.html"
+2025/12/23 11:58:20 [alert] 22#22: 1024 worker_connections are not enough
+2025/12/23 11:58:20 [error] 22#22: *1027 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /dendak-geojson HTTP/1.1", upstream: "http://127.0.0.1:80/dendak-geojson", host: "localhost", referrer: "http://localhost/kokapena.html"
+2025/12/23 11:58:20 [error] 22#22: *1027 no live upstreams while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /dendak-geojson HTTP/1.1", upstream: "http://localhost/dendak-geojson", host: "localhost", referrer: "http://localhost/kokapena.html"
+2025/12/23 11:59:45 [emerg] 1#1: upstream "backend" may not have port 3000 in /etc/nginx/nginx.conf:34
+2025/12/23 11:59:46 [emerg] 1#1: upstream "backend" may not have port 3000 in /etc/nginx/nginx.conf:34
+2025/12/23 11:59:47 [emerg] 1#1: upstream "backend" may not have port 3000 in /etc/nginx/nginx.conf:34
+2025/12/23 11:59:48 [emerg] 1#1: upstream "backend" may not have port 3000 in /etc/nginx/nginx.conf:34
+2025/12/23 11:59:49 [emerg] 1#1: upstream "backend" may not have port 3000 in /etc/nginx/nginx.conf:34
+2025/12/23 11:59:51 [emerg] 1#1: upstream "backend" may not have port 3000 in /etc/nginx/nginx.conf:34
+2025/12/23 11:59:54 [emerg] 1#1: upstream "backend" may not have port 3000 in /etc/nginx/nginx.conf:34
+2025/12/23 12:00:01 [emerg] 1#1: upstream "backend" may not have port 3000 in /etc/nginx/nginx.conf:34
+2025/12/23 12:00:14 [emerg] 1#1: upstream "backend" may not have port 3000 in /etc/nginx/nginx.conf:46

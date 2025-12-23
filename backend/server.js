@@ -15,17 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Rutas API
-app.use('/api', tiendasRoutes);
-
-// Ruta principal - servir el frontend
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/index.html'));
-});
-
-// Ruta para el mapa
-app.get('/kokapena', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/kokapena.html'));
-});
+app.use('/', tiendasRoutes);
 
 // Ruta de salud para Docker healthcheck
 app.get('/health', (req, res) => {
@@ -39,7 +29,7 @@ app.get('/health', (req, res) => {
 // Manejo de errores 404
 app.use((req, res) => {
     // Si la petición es para la API o acepta JSON, devolver JSON en vez de HTML
-    if (req.originalUrl.startsWith('/api') || req.accepts('json')) {
+    if (req.originalUrl.startsWith('/') || req.accepts('json')) {
         return res.status(404).json({ error: 'Not found', path: req.originalUrl });
     }
 
