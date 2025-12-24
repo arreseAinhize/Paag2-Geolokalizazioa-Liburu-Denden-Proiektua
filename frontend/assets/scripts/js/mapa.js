@@ -1,6 +1,5 @@
-// Usar ruta relativa para la API (misma origen)
-const API_BASE_URL = '';
-console.info('API base (mapa):', API_BASE_URL || 'same origin');
+// Usar URL relativa para la API
+const API_BASE_URL = 'http://localhost';
 
 let map = null;
 let markers = [];

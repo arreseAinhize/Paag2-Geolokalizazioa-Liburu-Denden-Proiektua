@@ -1,7 +1,4 @@
-// Usar ruta relativa para que funcione tanto en desarrollo como en producción
-const API_BASE_URL = '';
-
-console.info('API base:', API_BASE_URL || 'same origin');
+const API_BASE_URL = 'http://localhost';
 
 let allTiendasData = [];
 
@@ -9,10 +6,7 @@ async function cargar_tiendas() {
     console.log("Cargando tiendas desde la API...");
     
     try {
-        const url = `${API_BASE_URL}/dendak-geojson`;
-        console.info('Fetching tiendas from', url);
-        const response = await fetch(url);
-        console.info('Fetch response status', response.status);
+        const response = await fetch(`${API_BASE_URL}/dendak-geojson`);
         const data = await response.json();
         
         if (data.success) {
@@ -36,10 +30,7 @@ async function cargar_tiendas() {
 
 async function cargar_municipios() {
     try {
-        const url = `${API_BASE_URL}/herriak`;
-        console.info('Fetching municipios from', url);
-        const response = await fetch(url);
-        console.info('Fetch response status', response.status);
+        const response = await fetch(`${API_BASE_URL}/herriak`);
         const data = await response.json();
         
         if (data.success) {
