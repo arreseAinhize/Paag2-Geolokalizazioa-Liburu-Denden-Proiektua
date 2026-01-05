@@ -71,7 +71,7 @@ Proiektu honek Durangaldeko liburu denda lokal, liburutegi zein mediatekak geolo
 - Erabili mapa dendak aurkitzeko eta informazioa ikusteko.
 - Aldatu tema argi/ilun botoiarekin.
 
-## 🖥️ Interfaze Grafikoaren Fluxua
+## Interfaze Grafikoaren Fluxua
 
 Erabiltzaileak aplikazioan nabigatzen duen fluxua honako hau da:
 
@@ -140,7 +140,7 @@ Proiektua etorkizunean hobetzeko ideia batzuk:
 
 - **Errendimendua hobetzea:** CDN erabiliz fitxategi estatikoak zerbitzatzea eta datu-base optimizazioa.
 
-## 🗒️ Oharrak
+## Oharrak
 
 - Proiektua garapenean dago; akatsak aurkitzen badituzu, jakinarazi.
 - Ziurtagiri SSLak HTTPS gaitzeko beharrezkoak dira.
