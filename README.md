@@ -94,9 +94,71 @@ Fluxu guztian zehar, erabiltzaileak hizkuntza aldatu dezake (euskera, ingelesa, 
 ## API Endpoints
 
 - `GET /dendak`: Dendak lortu.
+  adb:
+  ```json
+  {
+      "id": 1,
+      "nombre": "Libreria PETITE",
+      "tipo": "libreria",
+      "municipio": "Abadiano",
+      "direccion": "Zubibitarte Kalea, 11 BAJO, 48220 Matiena, Abadiano (Bizkaia)",
+      "telefono": "946810438",
+      "email": null,
+      "lat": "43.150921",
+      "lon": "-2.609843",
+      "created_at": "2026-01-05T18:44:32.000Z",
+      "updated_at": "2026-01-05T18:44:32.000Z"
+    }
+  ```
 - `GET /herriak`: Herriak lortu.
+  adb:
+  ```json
+    "data": [
+    "Abadiano",
+    "Amorebieta-Etxano",
+    "Atxondo",
+    "Berriz",
+    "Durango",
+    "Elorrio",
+    "Ermua",
+    "Iurreta",
+    "MaÃ±aria",
+    "Mallabia",
+    "Otxandio",
+    "Zaldibar"
+  ]
+  ```
 - `GET /motak`: Mota desberdinak lortu.
+  adb:
+  ```json
+    "data": [
+    "biblioteca",
+    "libreria",
+    "mediateca"
+  ]
+  ```
 - `GET /dendak-geojson`: GeoJSON formatuan dendak lortu.
+  adb:
+  ```json
+   {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-2.609843, 43.150921]
+        },
+        "properties": {
+          "id": 1,
+          "nombre": "Libreria PETITE",
+          "tipo": "libreria",
+          "municipio": "Abadiano",
+          "direccion": "Zubibitarte Kalea, 11 BAJO, 48220 Matiena, Abadiano (Bizkaia)",
+          "telefono": "946810438",
+          "email": null,
+          "icon": "📚",
+          "color": "#00c6e6"
+        }
+      },
+  ```
 
 ## Gehigarriak
 
