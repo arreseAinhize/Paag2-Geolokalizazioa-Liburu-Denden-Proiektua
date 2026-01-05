@@ -37,7 +37,7 @@ app.use((req, res) => {
     const filePath = path.join(__dirname, '../frontend/404.html');
     res.status(404).sendFile(filePath, (err) => {
         if (err) {
-            console.error('No se pudo enviar 404.html:', err.message);
+            console.error('Ezin izan da 404.html bidali:', err.message);
             res.type('txt').send('404 - Not Found');
         }
     });
@@ -47,12 +47,12 @@ app.use((req, res) => {
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ 
-        error: 'Algo salió mal en el servidor',
+        error: 'Zerbitzarian zerbait txarto atara da:',
         message: process.env.NODE_ENV === 'development' ? err.message : undefined
     });
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`🚀 Servidor corriendo en http://0.0.0.0:${PORT}`);
-    console.log(`📁 Frontend en: ${path.join(__dirname, '../frontend')}`);
+app.listen(PORT, '127.0.0.1', () => {
+    console.log(`🚀 Backend: http://127.0.0.1:${PORT}`);
+    console.log(`📁 Frontend: http://127.0.0.1:80`);
 });
